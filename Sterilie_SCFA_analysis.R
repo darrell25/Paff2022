@@ -16,8 +16,8 @@ sample.means <- fread(file="sterilization.meta.csv")
 sample.means <- sample.means %>% mutate (across('Sterilization', str_replace, "1.0bleach", "1.0% Bleach")) %>% 
   mutate (across('Sterilization', str_replace, "1.5bleach", "1.5% Bleach")) %>%
   mutate (across('Sterilization', str_replace, "70reagentalcohol", "70% Alcohol")) %>%
-  mutate (across('Sterilization', str_replace, "autoclave", "Autoclave")) %>%
   mutate (across('Sterilization', str_replace, "33minuteautoclave", "Autoclave")) %>%
+  mutate (across('Sterilization', str_replace, "autoclave", "Autoclave")) %>%
   mutate (across('Sterilization', str_replace, "2.0H2O2", "2.0% H2O2")) %>%
   mutate (across('Sterilization', str_replace, "nosterilization", "No Sterilization"))
 
